@@ -7,7 +7,9 @@ pipeline {
 
     stages {
         stage('Checkout') {
-            git url:'https://github.com/seb-account/simple-maven-project'
+            steps {
+                git url:'https://github.com/seb-account/simple-maven-project'
+            }
         }
 
         stage('Build'){
