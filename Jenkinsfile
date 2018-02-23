@@ -6,6 +6,10 @@ pipeline {
     }
 
     stages {
+        stage('Checkout') {
+            git url:'https://github.com/seb-account/simple-maven-project'
+        }
+
         stage('Build'){
             steps {
                 sh 'mvn clean package'
